@@ -10,10 +10,10 @@ body {
     flex-direction: row;
     justify-content: center;
     padding-top: 50px;
-    font-family: 'Nunito', sans-serif;
     font-size: large;
 }
 
 h1 {
     display: flex;
+    font-family: 'Nunito', sans-serif;
 }
