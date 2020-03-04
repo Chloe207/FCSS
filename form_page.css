@@ -1,0 +1,16 @@
+html { 
+    background: url(background.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+
+
+header {
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: large;
+  }
