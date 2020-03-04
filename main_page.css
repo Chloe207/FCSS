@@ -1,12 +1,18 @@
-body { 
-   background: url(background.jpg) no-repeat center center fixed; 
-   -webkit-background-size: cover;
-   -moz-background-size: cover;
-   -o-background-size: cover;
-   background-size: cover;
- }
 
- h1 {
+body {
+    background: url(background.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    padding-top: 50px;
+    padding-right: 50px;
+    padding-left: 50px;
+    padding-bottom: 50px;
+    
+}
+
+h1 {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -19,16 +25,6 @@ body {
     color: rgb(189, 216, 241);
     text-shadow: transparent;
     font-weight: bold;
- }
-
- body {
-    justify-content: center;
-    padding-top: 50px;
-    padding-right: 50px;
-    padding-left: 50px;
-    padding-bottom: 50px;
-    font-family: 'Nunito', sans-serif;
-    font-size: large;
  }
 
  .nav {
@@ -153,4 +149,3 @@ body {
    66% {margin-top:-100px;}
    71% {margin-top:0px;}
    100% {margin-top:0px;}
-}
