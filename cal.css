@@ -33,7 +33,12 @@ ul {
 
 .month .prev {
     float: left;
-    padding-top: 10px;
+    width: 28px;
+    height: 28px;
+    padding: 5px;
+    margin-top: 5px;
+    border-radius: 50%;
+    cursor: pointer;
 }
 
 
@@ -41,7 +46,14 @@ ul {
 
 .month .next {
     float: right;
-    padding-top: 10px;
+    width: 28px;
+    height: 28px;
+    padding: 5px;
+    padding-left: 7px;
+    padding-right: 4px;
+    margin-top: 5px;
+    border-radius: 50%;
+    cursor: pointer;
 }
 
 
@@ -87,7 +99,38 @@ ul {
     padding-bottom: 5px;
     padding-left: 10px;
     padding-right: 10px;
-    background: #1abc9c;
+    background: #2ebdff;
     color: white !important;
     border-radius: 5px;
+    cursor: pointer;
+}
+
+.prev:hover {
+    background: #5dccff;
+}
+
+.next:hover {
+    background: #5dccff;
+}
+
+.inactive {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.inactive:hover {
+    background: rgb(221, 221, 221);
+}
+
+#spacer1,
+#spacer2,
+#spacer3,
+#spacer4,
+#spacer5,
+#spacer6 {
+    color: #eee !important;
 }

@@ -3,13 +3,13 @@
 
 <head>
     <title>FCSS Calendar</title>
-    <link rel='stylesheet' type='text/css' href="./cal.css">
-    <link rel="stylesheet" type="text/css" href="./main_page.css">
     <link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-
+    <script src="./calendar.js"></script>
+    <link rel='stylesheet' type='text/css' href="./cal.css">
+    <link rel="stylesheet" type="text/css" href="./main_page.css">
 </head>
 
 <body>
@@ -18,51 +18,59 @@
         <ul>
             <li class="prev">&#10094;</li>
             <li class="next">&#10095;</li>
-            <li>March<br><span style="font-size:18px">2020</span></li>
+            <li id="month_name">
+                <div id='month'>March</div><span id='year' style="font-size:18px">2020</span></li>
         </ul>
     </div>
 
     <ul class="weekdays">
-        <li>Su</li>
         <li>Mo</li>
         <li>Tu</li>
         <li>We</li>
         <li>Th</li>
         <li>Fr</li>
         <li>Sa</li>
+        <li>Su</li>
     </ul>
 
     <ul class="days">
-        <li>1</li>
-        <li>2</li>
-        <li>3</li>
-        <li>4</li>
-        <li>5</li>
-        <li>6</li>
-        <li>7</li>
-        <li>8</li>
-        <li>9</li>
-        <li><span class="active">10</span></li>
-        <li>11</li>
-        <li>12</li>
-        <li>13</li>
-        <li>14</li>
-        <li>15</li>
-        <li>16</li>
-        <li>17</li>
-        <li>18</li>
-        <li>19</li>
-        <li>20</li>
-        <li>21</li>
-        <li>22</li>
-        <li>23</li>
-        <li>24</li>
-        <li>25</li>
-        <li>26</li>
-        <li>27</li>
-        <li>28</li>
-        <li>29</li>
-        <li>30</li>
+        <li id='spacer1'>30</li>
+        <li id='spacer2'>30</li>
+        <li id='spacer3'>30</li>
+        <li id='spacer4'>30</li>
+        <li id='spacer5'>30</li>
+        <li id='spacer6'>30</li>
+        <li id='d1'><span class='inactive'>1</span></li>
+        <li id='d2'><span class='inactive'>2</span></li>
+        <li id='d3'><span class='inactive'>3</span></li>
+        <li id='d4'><span class='inactive'>4</span></li>
+        <li id='d5'><span class='inactive'>5</span></li>
+        <li id='d6'><span class='inactive'>6</span></li>
+        <li id='d7'><span class='inactive'>7</span></li>
+        <li id='d8'><span class='inactive'>8</span></li>
+        <li id='d9'><span class='inactive'>9</span></li>
+        <li id='d10'><span class="active">10</span></li>
+        <li id='d11'><span class='inactive'>11</span></li>
+        <li id='d12'><span class='inactive'>12</span></li>
+        <li id='d13'><span class='inactive'>13</span></li>
+        <li id='d14'><span class='inactive'>14</span></li>
+        <li id='d15'><span class='inactive'>15</span></li>
+        <li id='d16'><span class='inactive'>16</span></li>
+        <li id='d17'><span class='inactive'>17</span></li>
+        <li id='d18'><span class='inactive'>18</span></li>
+        <li id='d19'><span class='inactive'>19</span></li>
+        <li id='d20'><span class='inactive'>20</span></li>
+        <li id='d21'><span class='inactive'>21</span></li>
+        <li id='d22'><span class='inactive'>22</span></li>
+        <li id='d23'><span class='inactive'>23</span></li>
+        <li id='d24'><span class='inactive'>24</span></li>
+        <li id='d25'><span class='inactive'>25</span></li>
+        <li id='d26'><span class='inactive'>26</span></li>
+        <li id='d27'><span class='inactive'>27</span></li>
+        <li id='d28'><span class='inactive'>28</span></li>
+        <li id='d29'><span class='inactive'>29</span></li>
+        <li id='d30'><span class='inactive'>30</span></li>
+        <li id='d31'><span class='inactive'>31</span></li>
     </ul>
 
 </body>
