@@ -1,5 +1,9 @@
 var spacers = 6;
 var a29 = false;
+var student_available_times = {};
+var current_day = [10, "MARCH", 2020]
+var down, up, col_down, col_up;
+var table, rows, boxes;
 document.addEventListener('DOMContentLoaded', function() {
     var days = document.getElementsByClassName('days')[0];
 
@@ -8,103 +12,47 @@ document.addEventListener('DOMContentLoaded', function() {
 
     front_arrow.addEventListener("click", next_month);
     back_arrow.addEventListener("click", prev_month);
-    d1.addEventListener("click", function() {
-        make_active(event.target);
-    });
-    d2.addEventListener("click", function() {
-        make_active(event.target);
-    });
-    d3.addEventListener("click", function() {
-        make_active(event.target);
-    });
-    d4.addEventListener("click", function() {
-        make_active(event.target);
-    });
-    d5.addEventListener("click", function() {
-        make_active(event.target);
-    });
-    d6.addEventListener("click", function() {
-        make_active(event.target);
-    });
-    d7.addEventListener("click", function() {
-        make_active(event.target);
-    });
-    d8.addEventListener("click", function() {
-        make_active(event.target);
-    });
-    d9.addEventListener("click", function() {
-        make_active(event.target);
-    });
-    d10.addEventListener("click", function() {
-        make_active(event.target);
-    });
-    d11.addEventListener("click", function() {
-        make_active(event.target);
-    });
-    d12.addEventListener("click", function() {
-        make_active(event.target);
-    });
-    d13.addEventListener("click", function() {
-        make_active(event.target);
-    });
-    d14.addEventListener("click", function() {
-        make_active(event.target);
-    });
-    d15.addEventListener("click", function() {
-        make_active(event.target);
-    });
-    d16.addEventListener("click", function() {
-        make_active(event.target);
-    });
-    d17.addEventListener("click", function() {
-        make_active(event.target);
-    });
-    d18.addEventListener("click", function() {
-        make_active(event.target);
-    });
-    d19.addEventListener("click", function() {
-        make_active(event.target);
-    });
-    d20.addEventListener("click", function() {
-        make_active(event.target);
-    });
-    d21.addEventListener("click", function() {
-        make_active(event.target);
-    });
-    d22.addEventListener("click", function() {
-        make_active(event.target);
-    });
-    d23.addEventListener("click", function() {
-        make_active(event.target);
-    });
-    d24.addEventListener("click", function() {
-        make_active(event.target);
-    });
-    d25.addEventListener("click", function() {
-        make_active(event.target);
-    });
-    d26.addEventListener("click", function() {
-        make_active(event.target);
-    });
-    d27.addEventListener("click", function() {
-        make_active(event.target);
-    });
-    d28.addEventListener("click", function() {
-        make_active(event.target);
-    });
-    d29.addEventListener("click", function() {
-        make_active(event.target);
-    });
-    d30.addEventListener("click", function() {
-        make_active(event.target);
-    });
-    d31.addEventListener("click", function() {
-        make_active(event.target);
-    });
 
-    // var newParagraph = document.createElement('p');
-    // newParagraph.innerText = 'New par';
-    // document.body.appendChild(newParagraph);
+    for (var i = 1; i <= 31; i++) {
+        id = "d" + i;
+        my = document.getElementById(id);
+        my.addEventListener("click", function() {
+            make_active(event.target);
+        });
+    }
+
+    table = document.getElementsByTagName('table')[0];
+    rows = table.getElementsByTagName('tr');
+    boxes = {}
+    for (var i = 1; i < rows.length; i++) {
+        boxes[rows[i].getElementsByTagName('th')[0].innerText] = rows[i].getElementsByTagName('td');
+    }
+
+    for (var key in boxes) {
+        for (var i = 0; i < boxes[key].length; i++) {
+            boxes[key][i].addEventListener("mousedown", function() {
+                if (event.target.tagName == 'TD') {
+                    k = event.target.parentElement.getElementsByTagName('th')[0].innerText
+                    for (var j = 0; j < boxes[k].length; j++) {
+                        if (event.target == boxes[k][j]) { col_down = j }
+                    }
+                    down = k;
+                }
+
+            })
+            boxes[key][i].addEventListener("mouseup", function() {
+                k = event.target.parentElement.getElementsByTagName('th')[0].innerText
+                var column;
+                for (var j = 0; j < boxes[k].length; j++) {
+                    if (event.target == boxes[k][j]) { col_up = j }
+                }
+                up = k;
+                if (col_down == col_up) {
+                    make_hours(down, up, col_down);
+                }
+            })
+        }
+    }
 });
 
 function next_month() {
@@ -329,6 +277,52 @@ function make_active(target) {
         new_span = document.createElement('span')
         new_span.setAttribute('class', 'active')
         new_span.innerText = number;
-        target_li.appendChild(new_span)
+        target_li.appendChild(new_span);
+        current_day = [number, month.innerText, year.innerText];
     }
+}
+
+function a(start_year) {
+    current_year = start_year;
+    while (current_year <= start_year + 4) {
+        for (var i in months) {
+            if (current_year % 4 == 0) {
+                iterate = days_leap
+            } else {
+                iterate = days_per
+            }
+            if (current_year == start_year) {
+                if (i > 8) {
+                    make_days(i, student_available_times, iterate, current_year);
+                }
+            } else if (current_year == start_year + 4) {
+                if (i < 6) {
+                    make_days(i, student_available_times, iterate, current_year);
+                }
+            } else {
+                make_days(i, student_available_times, iterate, current_year);
+            }
+        }
+        current_year++;
+    }
+
+    console.log(student_available_times)
+}
+
+function make_days(i, dict, iterate, current_year) {
+    for (var j = 1; j <= iterate[i]; j++) {
+        mo = parseInt(i) + 1;
+        my_date = j + '/' + mo + '/' + current_year;
+        dict[my_date] = [];
+    }
+}
+
+function make_hours(s, e, column) {
+    for (key in boxes) {}
+}
+
+function make_float(hour) {
+    hour = parseInt(key);
+    if (key[3] == '3') { hour = hour + 0.5 }
+    return hour;
 }
