@@ -1,8 +1,8 @@
-document.addEventListener('mainpage', function() {
-    var button1 = document.getElementsByTagName('nav-item');
+document.addEventListener('DOMContentLoaded', function() {
+    var button1 = document.getElementById('aboutID');
     console.log(button1);
 
     button1.addEventListener('click', function(event) {
-        alert("Page not developed yet")
+        window.alert("Page not developed yet");
     })
 })
