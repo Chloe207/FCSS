@@ -7,10 +7,45 @@ html {
   }
 
 
-header {
+
+/*
+  h1 {
     height: 100px;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: large;
+  }*/
+
+  h1 {
+    font-size: 3em;
+    text-align: center;
+    color: #fff;
+    font-weight: 100;
+    text-transform: capitalize;
+    letter-spacing: 4px;
+    font-family: 'Roboto', sans-serif;
+  }
+
+.form_div{ 
+    /*
+    width: 50%;
+    margin-left : 25%;
+    */
+    text-align: center;
+}
+
+.agileits-top p a {
+    color: #fff;
+    -webkit-transition: .5s all;
+    -moz-transition: .5s all;
+    transition: .5s all;
+    font-weight: 400;
+  }
+
+  .main-agileinfo {
+    width: 35%;
+    margin: 3em auto;
+    background: rgba(0, 0, 0, 0.18);
+    background-size: cover;
   }
