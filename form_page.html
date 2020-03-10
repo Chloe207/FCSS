@@ -3,81 +3,55 @@
 <html lang="en">
 
 <head>
-    <title>This is the first trial at the form page!</title>
+    <title>FCSS Sign-Up Form</title>
     <link rel='stylesheet' type='text/css' href='form_page.css'>
+    <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">  </head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
 </head>
 
-
 <body>
-    <header>
-        Sign Up Page
-    </header>
-    <h1>
-        This is the first heading
-    </h1>
+    <h1> Fully Comprehensible Supervision System </h1>
+
+    <nav class="nav">
+      <a href="index.html" class="nav-item is-active" active-color="orange">Home</a>
+      <a href="#" class="nav-item" active-color="green">About</a>
+      <a href="form_page.html" class="nav-item" active-color="blue">Sign Up</a>
+      <a href="#" class="nav-item" active-color="red">Calendar</a>
+      <span class="nav-indicator"></span>
+    </nav>
+
+    <div class="main-agileinfo">
+        <div class = 'agileits-top'>
+            <form action="#" method="post">
+                <ul class='flex_inner'>
+                    <li>
+                        <input class="text" type="text" name="Username" placeholder="Username" required="">
+                    </li>
+                    <li>
+                        <input class="text email" type="email" name="email" placeholder="Email" required="">
+                    </li>
+                    <li>
+                        <input class="text" type="password" name="password" placeholder="Password" required="">
+                    </li>
+                    <li>
+                        <input class="text w3lpass" type="password" name="password" placeholder="Confirm Password" required="">
+                    </li>
+
+                </ul>
 
 
-
-        <!-- Default form register -->
-    <form class="text-center border border-light p-5" action="#!">
-
-        <p class="h4 mb-4">Sign up</p>
-
-        <div class="form-row mb-4">
-            <div class="col">
-                <!-- First name -->
-                <input type="text" id="defaultRegisterFormFirstName" class="form-control" placeholder="First name">
-            </div>
-            <div class="col">
-                <!-- Last name -->
-                <input type="text" id="defaultRegisterFormLastName" class="form-control" placeholder="Last name">
-            </div>
+                <div class="wthree-text">
+                    <label class="anim">
+                        <input type="checkbox" class="checkbox" required="">
+                        <span>I Agree To The Terms & Conditions</span>
+                    </label>
+                    <div class="clear"> </div>
+                </div>
+                <input type="submit" value="SIGNUP">
+            </form>
         </div>
-
-        <!-- E-mail -->
-        <input type="email" id="defaultRegisterFormEmail" class="form-control mb-4" placeholder="E-mail">
-
-        <!-- Password -->
-        <input type="password" id="defaultRegisterFormPassword" class="form-control" placeholder="Password" aria-describedby="defaultRegisterFormPasswordHelpBlock">
-        <small id="defaultRegisterFormPasswordHelpBlock" class="form-text text-muted mb-4">
-            At least 8 characters and 1 digit
-        </small>
-
-        <!-- Phone number -->
-        <input type="text" id="defaultRegisterPhonePassword" class="form-control" placeholder="Phone number" aria-describedby="defaultRegisterFormPhoneHelpBlock">
-        <small id="defaultRegisterFormPhoneHelpBlock" class="form-text text-muted mb-4">
-            Optional - for two step authentication
-        </small>
-
-        <!-- Newsletter -->
-        <div class="custom-control custom-checkbox">
-            <input type="checkbox" class="custom-control-input" id="defaultRegisterFormNewsletter">
-            <label class="custom-control-label" for="defaultRegisterFormNewsletter">Subscribe to our newsletter</label>
-        </div>
-
-        <!-- Sign up button -->
-        <button class="btn btn-info my-4 btn-block" type="submit">Sign in</button>
-
-        <!-- Social register -->
-        <p>or sign up with:</p>
-
-        <a href="#" class="mx-2" role="button"><i class="fab fa-facebook-f light-blue-text"></i></a>
-        <a href="#" class="mx-2" role="button"><i class="fab fa-twitter light-blue-text"></i></a>
-        <a href="#" class="mx-2" role="button"><i class="fab fa-linkedin-in light-blue-text"></i></a>
-        <a href="#" class="mx-2" role="button"><i class="fab fa-github light-blue-text"></i></a>
-
-        <hr>
-
-        <!-- Terms of service -->
-        <p>By clicking
-            <em>Sign up</em> you agree to our
-            <a href="" target="_blank">terms of service</a>
-
-    </form>
-    <!-- Default form register -->
-
-
-
+    </div>
 
 
 

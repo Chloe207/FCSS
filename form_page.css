@@ -1,16 +1,117 @@
-html { 
+body { 
     background: url(background.jpg) no-repeat center center fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    padding-top: 50px;
+    padding-right: 50px;
+    padding-left: 50px;
+    padding-bottom: 50px;
   }
 
 
-header {
-    height: 100px;
+
+  h1 {
     display: flex;
-    align-items: center;
+    flex-direction: row;
     justify-content: center;
+    padding-top: 50px;
+    padding-right: 50px;
+    padding-left: 50px;
+    padding-bottom: 50px;
+    font-family: 'Nunito', sans-serif;
     font-size: large;
+    color: rgb(189, 216, 241);
+    text-shadow: transparent;
+    font-weight: bold;
+}
+
+.nav {
+    display: inline-flex;
+    padding-top: 50px;
+    padding-right: 50px;
+    padding-left: 50px;
+    padding-bottom: 100px;
+    position: relative;
+    overflow: hidden;
+    max-width: 100%;
+    background-color: rgba(181, 240, 255, 0.692);
+    padding: 0 20px;
+    border-radius: 40px;
+    box-shadow: 0 10px 40px rgba(159, 162, 177, .8);
+}
+
+.nav-item {
+    color: #83818c;
+    padding: 20px;
+    text-decoration: none;
+    transition: .3s;
+    margin: 0 6px;
+    z-index: 1;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 500;
+    position: relative;
+}
+
+.nav-item::before {
+    content: "";
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background-color: #4892f393;
+    border-radius: 8px 8px 0 0;
+    opacity: 0;
+    transition: .3s;
+}
+
+.nav-item:not(.active):hover:before {
+    opacity: 1;
+    bottom: 0;
+}
+
+.nav-item:not(.active):hover {
+    color: #333;
+}
+
+.nav-indicator {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 4px;
+    transition: .4s;
+    height: 5px;
+    z-index: 1;
+    border-radius: 8px 8px 0 0;
+}
+
+@media (max-width: 580px) {
+    .nav {
+        overflow: auto;
+    }
+}
+
+.agileits-top{ 
+    /*
+    width: 50%;
+    margin-left : 25%;
+    */
+    text-align: center;
+}
+
+.agileits-top p a {
+    color: #fff;
+    -webkit-transition: .5s all;
+    -moz-transition: .5s all;
+    transition: .5s all;
+    font-weight: 400;
+  }
+
+  .main-agileinfo {
+    width: 35%;
+    margin: 3em auto;
+    background: rgba(0, 0, 0, 0.18);
+    background-size: cover;
   }
