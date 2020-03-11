@@ -203,7 +203,7 @@ td {
     line-height: 1.4;
     border-radius: 0.2rem;
     transition: opacity 0.3s ease;
-    width: 22%;
+    width: 23%;
     border-top: thin dotted #ccc;
     cursor: pointer;
 }
@@ -249,4 +249,14 @@ select {
     font-family: 'Nunito', sans-serif;
     font-size: 15px;
     padding: 10px;
+}
+
+#moremarg {
+    margin-top: 20px;
+    background: #2ebdff;
+    color: white;
+    font-family: 'Nunito', sans-serif;
+    padding: 20px;
+    letter-spacing: 2px;
+    text-align: center;
 }

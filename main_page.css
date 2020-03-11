@@ -93,6 +93,7 @@ h1 {
 
 .content {
     padding-top: 170px;
+    padding-bottom: 100px;
 }
 
 .slider-wrapper {
@@ -164,4 +165,16 @@ h1 {
     100% {
         margin-top: 0px;
     }
+}
+
+
+.student_image {
+    transform: rotate(180deg);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    border-radius: 20%;
+    padding: 50px;
+    opacity: 0.0;  
 }
