@@ -8,6 +8,19 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">  </head>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
+    <style> 
+        ::placeholder { /* Firefox, Chrome, Opera */ 
+            color: #4892f393; 
+        } 
+          
+        :-ms-input-placeholder { /* Internet Explorer 10-11 */ 
+            color: #4892f393; 
+        } 
+          
+        ::-ms-input-placeholder { /* Microsoft Edge */ 
+            color: #4892f393; 
+        } 
+    </style>
 </head>
 
 <body>
@@ -24,24 +37,52 @@
     <div class="flex_outer">
         <form action="#" method="post">
             <ul class='flex_inner'>
-                <li>
+                <li class = text_li>
                     <input class="text" type="text" name="Username" placeholder="Username" required="">
                 </li>
-                <li>
+                <li class = text_li>
                     <input class="text email" type="email" name="email" placeholder="Email" required="">
                 </li>
-                <li>
+                <li class = text_li>
                     <input class="text" type="password" name="password" placeholder="Password" required="">
                 </li>
-                <li>
+                <li class = text_li>
                     <input class="text w3lpass" type="password" name="password" placeholder="Confirm Password" required="">
                 </li>
-                <li>
-                    <input type="submit" value="SIGNUP">
+
+                <div class="question">
+                    Which divisions do you take modules from?
+                </div>
+                
+                <li class = checkbox_li>
+                    <input type="checkbox" name='food_picky' value="A" /> A <br>
+                </li>
+                <li class = checkbox_li>
+                    <input type="checkbox" name='food_picky' value="B" /> B <br>
+                </li>
+                <li class = checkbox_li>
+                    <input type="checkbox" name='food_picky' value="C" /> C <br>
+                </li>
+                <li class = checkbox_li>
+                    <input type="checkbox" name='food_picky' value="D" /> D <br>
+                </li>
+                <li class = checkbox_li>
+                    <input type="checkbox" name='food_picky' value="E" checked/> E <br>
+                </li>
+                <li class = checkbox_li>
+                    <input type="checkbox" name='food_picky' value="F" checked/> F <br>
+                </li>
+                <li class = checkbox_li>
+                    <input type="checkbox" name='food_picky' value="G" checked/> G <br>
+                </li>
+                <li class = checkbox_li>
+                    <input type="checkbox" name='food_picky' value="M" checked/> M <br>
                 </li>
 
+                <li class = button_li>
+                    <input type="submit" value="SIGN-UP" class = form-submit-button>
+                </li>
             </ul>
-
         </form>
     </div>
 

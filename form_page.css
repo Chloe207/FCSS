@@ -96,18 +96,6 @@ body {
 
 
 
-/*
-.flex_outer p a {
-    color: #fff;
-    -webkit-transition: .5s all;
-    -moz-transition: .5s all;
-    transition: .5s all;
-    font-weight: 400;
-}
-*/
-
-
-
 .flex_outer {
     display: flex;
     flex-direction: column;
@@ -119,41 +107,95 @@ body {
     background-size: cover;
   }
 
-form{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: green;
-}
-
-
-
 
 .flex_inner {
     display: flex;
     flex-direction: column;
     align-items: center;
     flex-wrap: wrap;
-    background-color: pink;
+    padding: 0;
+}
+
+.text_li{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 8px;
+    list-style-type:none;
+    color: #4892f393;
+    opacity: 0.7;
+}
+
+.checkbox_li{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 8px;
+    list-style-type:none;
+    color: rgba(255, 255, 255, 0.664);
 }
 
 
+.button_li{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 8px;
+    list-style-type:none;
+    color: #4892f393;
+    opacity: 0.7;
+}
+
+/*
 li {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
-    padding: 4px;
-    background-color: blue;
+    padding: 8px;
+    list-style-type:none;
+    color: #4892f393;
   }
+*/
 
-.flex_inner li button {
-    margin-left: auto;
-    padding: 8px 16px;
-    border: none;
-    background: #333;
-    color: #f2f2f2;
-    text-transform: uppercase;
-    letter-spacing: .09em;
-    border-radius: 2px;
-  }
+.question {
+    color: rgba(255, 255, 255, 0.664);
+}
+
+
+.form-submit-button {
+
+    background: #4892f393;
+    
+    color: #fff;
+    
+    border: 1px solid #eee;
+    
+    border-radius: 20px;
+    
+    box-shadow: 5px 5px 5px #eee;
+    
+    text-shadow:none;
+    
+    }
+    
+.form-submit-button:hover {
+    
+    background: #016ABC;
+    
+    color: #fff;
+    
+    border: 1px solid #eee;
+    
+    border-radius: 20px;
+    
+    box-shadow: 5px 5px 5px #eee;
+    
+    text-shadow:none;
+    
+    }
+
+
