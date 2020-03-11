@@ -282,41 +282,6 @@ function make_active(target) {
     }
 }
 
-function a(start_year) {
-    current_year = start_year;
-    while (current_year <= start_year + 4) {
-        for (var i in months) {
-            if (current_year % 4 == 0) {
-                iterate = days_leap
-            } else {
-                iterate = days_per
-            }
-            if (current_year == start_year) {
-                if (i > 8) {
-                    make_days(i, student_available_times, iterate, current_year);
-                }
-            } else if (current_year == start_year + 4) {
-                if (i < 6) {
-                    make_days(i, student_available_times, iterate, current_year);
-                }
-            } else {
-                make_days(i, student_available_times, iterate, current_year);
-            }
-        }
-        current_year++;
-    }
-
-    console.log(student_available_times)
-}
-
-function make_days(i, dict, iterate, current_year) {
-    for (var j = 1; j <= iterate[i]; j++) {
-        mo = parseInt(i) + 1;
-        my_date = j + '/' + mo + '/' + current_year;
-        dict[my_date] = [];
-    }
-}
-
 function make_hours(s, e, column) {
     for (key in boxes) {
         if (make_float(key) >= make_float(s) && make_float(key) <= make_float(e)) {
