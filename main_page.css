@@ -167,7 +167,7 @@ h1 {
     }
 }
 
-/* To add a fading image - Github bug
+
 .student_image {
     transform: rotate(180deg);
     display: block;
@@ -177,5 +177,4 @@ h1 {
     border-radius: 20%;
     padding: 50px;
     opacity: 0.0;  
-*/
 }

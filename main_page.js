@@ -6,13 +6,12 @@ document.addEventListener('DOMContentLoaded', function() {
         window.alert("Page not developed yet");
     })
     
-    /* If we want to add a fading image - github bug
     var image = document.getElementById('myImage');
 
     var lastScrollTop = 0;
 
     window.addEventListener("scroll", function(){
-    var st = window.pageYOffset || document.documentElement.scrollTop; // Credits: "https://github.com/qeremy/so/blob/master/so.dom.js#L426"
+    var st = window.pageYOffset || document.documentElement.scrollTop;
 
     if (st > lastScrollTop){
         image.style.opacity = '1';
@@ -21,5 +20,4 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     });
-    */
 })
