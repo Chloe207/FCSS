@@ -318,11 +318,30 @@ function make_days(i, dict, iterate, current_year) {
 }
 
 function make_hours(s, e, column) {
-    for (key in boxes) {}
+    console.log(s.cellIndex)
+    for (key in boxes) {
+        if (make_float(key) >= make_float(s) && make_float(key) <= make_float(e)) {
+            current_td = boxes[key][column];
+            if (current_td.className != "stage-blue" || current_td.className != "stage-purple" || current_td.className != "stage-orange" || current_td.className != "stage-green") {
+                to_delete = 2 * (make_float(e) - make_float(s));
+                if (make_float(key) == make_float(s)) {
+                    current_td.setAttribute("class", 'stage-pink');
+                    current_td.setAttribute("rowspan", parseInt(to_delete + 1))
+                } else {
+                    current_td.remove()
+                }
+            }
+        }
+    }
 }
 
-function make_float(hour) {
+function make_float(key) {
     hour = parseInt(key);
     if (key[3] == '3') { hour = hour + 0.5 }
     return hour;
+}
+
+function row_colour(col) {
+    c = ['stage-green', 'stage-blue', 'stage-purple', 'stage-orange']
+    return c[col]
 }
