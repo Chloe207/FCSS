@@ -6,7 +6,6 @@ document.addEventListener('DOMContentLoaded', function() {
         window.alert("Page not developed yet");
     })
     
-    /* If we want to add a fading image - github bug
     var image = document.getElementById('myImage');
 
     var lastScrollTop = 0;
@@ -21,5 +20,4 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     });
-    */
 })
