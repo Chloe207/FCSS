@@ -4,10 +4,9 @@
 <head>
     <title>FCSS Calendar</title>
     <link rel="stylesheet" type="text/css" href="./main_page.css">
-    <link rel='stylesheet' type='text/css' href="./cal.css">
 
     <link href="https://fonts.googleapis.com/css?family=Quicksand|Nunito&display=swap" rel="stylesheet">
-    
+
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 
@@ -17,17 +16,19 @@
     <script src="./calendar.js"></script>
     <script src="./main_page.js"></script>
 
+    <link rel='stylesheet' type='text/css' href="./cal.css">
+
 </head>
 
 <body>
     <h1> Fully Comprehensible Supervision System </h1>
 
     <nav class="nav">
-      <a href="index.html" class="nav-item" active-color="orange">Home</a>
-      <a href="#" class="nav-item" id="aboutID" active-color="green">About</a>
-      <a href="form_page.html" class="nav-item" active-color="blue">Sign Up</a>
-      <a href="calendar.html" class="nav-item" active-color="red">Calendar</a>
-      <span class="nav-indicator"></span>
+        <a href="index.html" class="nav-item" active-color="orange">Home</a>
+        <a href="#" class="nav-item" id="aboutID" active-color="green">About</a>
+        <a href="form_page.html" class="nav-item" active-color="blue">Sign Up</a>
+        <a href="calendar.html" class="nav-item" active-color="red">Calendar</a>
+        <span class="nav-indicator"></span>
     </nav>
 
     <div class="calendar">
@@ -39,7 +40,7 @@
                     <div id='month'>March</div><span id='year' style="font-size:18px">2020</span></li>
             </ul>
         </div>
-    
+
         <ul class="weekdays">
             <li>Mo</li>
             <li>Tu</li>
@@ -49,7 +50,7 @@
             <li>Sa</li>
             <li>Su</li>
         </ul>
-    
+
         <ul class="days">
             <li id='spacer1'>30</li>
             <li id='spacer2'>30</li>
@@ -90,9 +91,9 @@
             <li id='d31'><span class='inactive'>31</span></li>
         </ul>
     </div>
-    
 
-    <span id='day_title'>Choose a subject:
+
+    <span id='moremarg'>Choose a subject:
     <select id="subjects" name="subjects">
         <option value="3f1">3F1</option>
         <option value="3f3">3F3</option>
