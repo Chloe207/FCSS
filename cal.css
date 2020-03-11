@@ -203,7 +203,7 @@ td {
     line-height: 1.4;
     border-radius: 0.2rem;
     transition: opacity 0.3s ease;
-    width: 22%;
+    width: 23%;
     border-top: thin dotted #ccc;
     cursor: pointer;
 }
