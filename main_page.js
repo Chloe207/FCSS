@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
     var lastScrollTop = 0;
 
     window.addEventListener("scroll", function(){
-    var st = window.pageYOffset || document.documentElement.scrollTop; // Credits: "https://github.com/qeremy/so/blob/master/so.dom.js#L426"
+    var st = window.pageYOffset || document.documentElement.scrollTop;
 
     if (st > lastScrollTop){
         image.style.opacity = '1';
