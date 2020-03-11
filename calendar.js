@@ -318,7 +318,6 @@ function make_days(i, dict, iterate, current_year) {
 }
 
 function make_hours(s, e, column) {
-    console.log(s.cellIndex)
     for (key in boxes) {
         if (make_float(key) >= make_float(s) && make_float(key) <= make_float(e)) {
             current_td = boxes[key][column];
