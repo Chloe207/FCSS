@@ -93,25 +93,67 @@ body {
     }
 }
 
-.agileits-top{ 
-    /*
-    width: 50%;
-    margin-left : 25%;
-    */
-    text-align: center;
-}
 
-.agileits-top p a {
+
+
+/*
+.flex_outer p a {
     color: #fff;
     -webkit-transition: .5s all;
     -moz-transition: .5s all;
     transition: .5s all;
     font-weight: 400;
-  }
+}
+*/
 
-  .main-agileinfo {
+
+
+.flex_outer {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
     width: 35%;
     margin: 3em auto;
     background: rgba(0, 0, 0, 0.18);
     background-size: cover;
+  }
+
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: green;
+}
+
+
+
+
+.flex_inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: pink;
+}
+
+
+li {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 4px;
+    background-color: blue;
+  }
+
+.flex_inner li button {
+    margin-left: auto;
+    padding: 8px 16px;
+    border: none;
+    background: #333;
+    color: #f2f2f2;
+    text-transform: uppercase;
+    letter-spacing: .09em;
+    border-radius: 2px;
   }
